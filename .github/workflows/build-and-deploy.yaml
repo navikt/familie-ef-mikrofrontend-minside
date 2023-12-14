@@ -5,7 +5,7 @@ on:
       - "main"
       - "dev-*"
 env:
-  "IMAGE": "ghcr.io/${{ github.repository }}/tms-mikrofrontend-template:${{ github.sha }}"
+  "IMAGE": "ghcr.io/${{ github.repository }}/familie-ef-mikrofrontend-minside:${{ github.sha }}"
 permissions:
   contents: "read"
   id-token: "write"
@@ -33,7 +33,7 @@ jobs:
         with:
           cdn-team-name: mitt-team-navn
           source: ./dist/
-          destination: "tms-mikrofrontend-template"
+          destination: "familie-ef-mikrofrontend-minside"
       - name: export-cdn-url
         run: |
           paths="${{ steps.cdn-upload.outputs.uploaded }}"
