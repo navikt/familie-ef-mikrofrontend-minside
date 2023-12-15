@@ -5,7 +5,7 @@ module.exports = {
     es2021: true,
   },
   parser: "@typescript-eslint/parser",
-  ignorePatterns: [".eslintrc.*", "**/dist/*.js", "vite.config.ts", "/server/server.js", "plugin:react/recommended"],
+  ignorePatterns: [".eslintrc.*", "**/dist/*.js", "/server/server.js", "plugin:react/recommended"],
   plugins: ["@typescript-eslint", "jsx-a11y", "react"],
   extends: [
     "eslint:recommended",
