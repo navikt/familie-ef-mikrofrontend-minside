@@ -1,20 +1,19 @@
 name: "Build and deploy"
+
 on:
-  push:
-    branches:
-      - "main"
-      - "dev-*"
+  workflow_dispatch:
+
 env:
-  "IMAGE": "ghcr.io/${{ github.repository }}/familie-ef-mikrofrontend-minside:${{ github.sha }}"
-permissions:
-  contents: "read"
-  id-token: "write"
-  packages: "write"
+  IMAGE: "ghcr.io/${{ github.repository }}/familie-ef-mikrofrontend-minside:${{ github.sha }}"
 
 jobs:
   build:
     name: "build"
     runs-on: "ubuntu-latest"
+    permissions:
+      contents: "read"
+      id-token: "write"
+      packages: "write"
     steps:
       - uses: "actions/checkout@v3"
       - uses: "actions/setup-node@v3"
@@ -45,9 +44,3 @@ jobs:
           cluster: dev-gcp
           id: "familie-ef-mikrofrontend-minside"
           url: ${{ steps.export-cdn-url.outputs.url }}
-#      - name: "update min-side-prod-manifest"
-#        uses: "navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main"
-#        with:
-#          cluster: dev-gcp
-#          id: "tms-mikfrofrontend-template-vitets"
-#          url: ${{ steps.export-cdn-url.outputs.url }}
