@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: "ghcr.io/${{ github.repository }}/familie-ef-mikrofrontend-minside:${{ github.sha }}"
+  "IMAGE": "ghcr.io/${{ github.repository }}/familie-ef-mikrofrontend-minside:${{ github.sha }}"
 
 jobs:
   build:
