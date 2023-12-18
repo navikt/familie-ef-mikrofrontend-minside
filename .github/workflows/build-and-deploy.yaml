@@ -43,7 +43,7 @@ jobs:
         uses: "navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main"
         with:
           cluster: dev-gcp
-          id: "tms-mikfrofrontend-template-vitets"
+          id: "familie-ef-mikrofrontend-minside"
           url: ${{ steps.export-cdn-url.outputs.url }}
 #      - name: "update min-side-prod-manifest"
 #        uses: "navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main"
