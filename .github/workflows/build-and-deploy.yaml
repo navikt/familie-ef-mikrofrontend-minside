@@ -31,7 +31,7 @@ jobs:
       - name: cdn-upload
         uses: navikt/frontend/actions/cdn-upload/v1@main
         with:
-          cdn-team-name: mitt-team-navn
+          cdn-team-name: teamfamilie
           source: ./dist/
           destination: "familie-ef-mikrofrontend-minside"
       - name: export-cdn-url
