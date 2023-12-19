@@ -11,6 +11,8 @@ jobs:
       contents: "read"
       id-token: "write"
       packages: "write"
+    outputs:
+      upload_url: ${{ steps.export-cdn-url.outputs.url }}
     steps:
       - uses: "actions/checkout@v3"
       - uses: "actions/setup-node@v3"
@@ -35,9 +37,11 @@ jobs:
           paths="${{ steps.cdn-upload.outputs.uploaded }}"
           cdn_js_path=$(echo $paths | cut -d',' -f1)
           echo "url=https://cdn.nav.no/$cdn_js_path" >> $GITHUB_OUTPUT
-#      - name: "update min-side-dev-manifest"
-#        uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
-#        with:
-#          cluster: dev-gcp
-#          id: "familie-ef-mikrofrontend-minside"
-#          url: ${{ steps.export-cdn-url.outputs.url }}
+  manifest-update-dev:
+    name: "update manifest dev-gcp"
+    runs-on: "ubuntu-latest"
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    with:
+      cluster: dev-gcp
+      id: "familie-ef-mikrofrontend-minside"
+      url: ${{ needs.build.outputs.url }}
