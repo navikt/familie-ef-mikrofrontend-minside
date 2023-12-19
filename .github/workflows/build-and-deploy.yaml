@@ -38,10 +38,10 @@ jobs:
           cdn_js_path=$(echo $paths | cut -d',' -f1)
           echo "url=https://cdn.nav.no/$cdn_js_path" >> $GITHUB_OUTPUT
   manifest-update-dev:
-    name: "update manifest dev-gcp"
-    runs-on: "ubuntu-latest"
     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    needs: build
     with:
       cluster: dev-gcp
       id: "familie-ef-mikrofrontend-minside"
       url: ${{ needs.build.outputs.url }}
+    secrets: inherit
