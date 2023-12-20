@@ -43,5 +43,5 @@ jobs:
     with:
       cluster: dev-gcp
       id: "familie-ef-mikrofrontend-minside"
-      url: ${{ needs.build.outputs.url }}
+      url: ${{ needs.build.outputs.upload_url }}
     secrets: inherit
