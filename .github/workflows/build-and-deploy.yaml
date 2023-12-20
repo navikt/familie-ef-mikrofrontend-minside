@@ -33,6 +33,7 @@ jobs:
           source: ./dist/
           destination: "familie-ef-mikrofrontend-minside"
       - name: export-cdn-url
+        id: export-cdn-url
         run: |
           paths="${{ steps.cdn-upload.outputs.uploaded }}"
           cdn_js_path=$(echo $paths | cut -d',' -f1)
