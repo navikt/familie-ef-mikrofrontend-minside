@@ -1,11 +1,11 @@
 import * as React from "react";
-
+import { ADeepblue100 } from "@navikt/ds-tokens/dist/tokens";
 export const EnsligForsørgerIcon: React.FC = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 64 64" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 64 64" fill="none">
       <path
         d="M50 26.4431C50 20.3066 45.299 15.332 39.5 15.332C36.5615 15.332 33.9049 16.6094 32.0009 18.668C30.0951 16.6094 27.4385 15.332 24.5 15.332C18.701 15.332 14 20.3066 14 26.4431C14 29.5535 15.2077 32.3653 17.154 34.3822L17 34.3796L32 48.6654L47 34.3796L46.846 34.3822C48.7923 32.3653 50 29.5535 50 26.4431Z"
-        fill="#CCF1D6"
+        fill={ADeepblue100}
       />
       <path
         d="M20.3333 42.7056C20.3333 48.0693 16.002 52.4113 10.6667 52.4113C5.33135 52.4113 1 48.0693 1 42.7056C1 37.3419 5.33135 33 10.6667 33C16.002 33 20.3333 37.3419 20.3333 42.7056Z"
