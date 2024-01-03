@@ -48,7 +48,7 @@ jobs:
       url: ${{ needs.build.outputs.upload_url }}
     secrets: inherit
 
-manifest-update-prod:
+  manifest-update-prod:
     uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
     needs: build
     with:
