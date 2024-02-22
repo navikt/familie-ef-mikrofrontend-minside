@@ -1,4 +1,3 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteMockServe } from "vite-plugin-mock";
 import { rollupImportMapPlugin } from "rollup-plugin-import-map";
@@ -23,7 +22,6 @@ export default ({ command }) => ({
     },
   ],
   build: {
-    manifest: true,
     rollupOptions: {
       input: resolve(__dirname, "src/Mikrofrontend.tsx"),
       preserveEntrySignatures: "exports-only",
