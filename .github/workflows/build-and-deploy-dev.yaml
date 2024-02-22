@@ -1,9 +1,6 @@
-name: "Build and deploy to dev and prod"
+name: "Build and deploy to dev"
 
-on:
-  push:
-    branches:
-      - 'main'
+on: [ workflow_dispatch ]
 
 jobs:
   build:
@@ -46,15 +43,6 @@ jobs:
     needs: build
     with:
       cluster: dev-gcp
-      id: "familie-ef-mikrofrontend-minside"
-      url: ${{ needs.build.outputs.upload_url }}
-    secrets: inherit
-
-  manifest-update-prod:
-    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
-    needs: build
-    with:
-      cluster: prod-gcp
       id: "familie-ef-mikrofrontend-minside"
       url: ${{ needs.build.outputs.upload_url }}
     secrets: inherit
