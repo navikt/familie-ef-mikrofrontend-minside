@@ -48,6 +48,7 @@ jobs:
       cluster: dev-gcp
       id: "familie-ef-mikrofrontend-minside"
       url: ${{ needs.build.outputs.upload_url }}
+      commitmsg: ${{ github.event.head_commit.message}}
     secrets: inherit
 
   manifest-update-prod:
@@ -57,4 +58,5 @@ jobs:
       cluster: prod-gcp
       id: "familie-ef-mikrofrontend-minside"
       url: ${{ needs.build.outputs.upload_url }}
+      commitmsg: ${{ github.event.head_commit.message}}
     secrets: inherit
