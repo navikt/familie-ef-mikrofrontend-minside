@@ -39,7 +39,7 @@ jobs:
           cdn_js_path=$(echo $paths | cut -d',' -f1)
           echo "url=https://cdn.nav.no/$cdn_js_path" >> $GITHUB_OUTPUT
   manifest-update-dev:
-    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml@main
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v2.yaml@main
     needs: build
     with:
       cluster: dev-gcp
