@@ -5,6 +5,10 @@ on:
     branches:
       - 'main'
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build:
     name: "build"
@@ -30,11 +34,13 @@ jobs:
         run: "npm run build"
       - name: cdn-upload
         id: cdn-upload
-        uses: navikt/frontend/actions/cdn-upload/v1@main
+        uses: nais/deploy/actions/cdn-upload/v2@master
         with:
-          cdn-team-name: teamfamilie
+          team: teamfamilie
           source: ./dist/
           destination: "familie-ef-mikrofrontend-minside"
+          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}
+          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }}
       - name: export-cdn-url
         id: export-cdn-url
         run: |

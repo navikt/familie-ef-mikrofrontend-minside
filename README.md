@@ -1,6 +1,6 @@
 # familie-ef-mikrofrontend-minside
 
-Kan brukes som utgangspunkt for å opprette nye mikrofrontends i Min Side.
+Mikrofrontend for tilgang til min side for personer med løpende `overangsstønad`, stønad til `barnetilsyn` eller stønad til `skolepenger`.
 
 # Kom i gang med utvikling
 
@@ -21,7 +21,7 @@ Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på git
 
 ## For NAV-ansatte
 
-Interne henvendelser kan sendes via Slack i kanalen #team-personbruker.
+Interne henvendelser kan sendes via Slack i kanalen #team-familie.
 
 ## Kode generert av GitHub Copilot
 
