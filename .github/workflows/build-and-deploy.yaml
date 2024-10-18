@@ -58,7 +58,7 @@ jobs:
     secrets: inherit
 
   manifest-update-prod:
-    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest.yaml-v2@main
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v2.yaml@main
     needs: build
     with:
       cluster: prod-gcp
