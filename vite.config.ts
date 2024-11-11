@@ -23,7 +23,7 @@ export default ({ command }) => ({
   ],
   build: {
     rollupOptions: {
-      input: resolve(__dirname, "index.html"),
+      input: resolve(__dirname, "src/Mikrofrontend.tsx"),
       preserveEntrySignatures: "exports-only",
       output: {
         entryFileNames: "familie-ef-mikrofrontend-minside.[hash].js",
