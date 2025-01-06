@@ -6,7 +6,6 @@
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest",
     "prepare": "husky install",
     "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx .",
     "pretty-quick": "pretty-quick --pattern \"**/*.*(ts|tsx)\""
@@ -42,8 +41,7 @@
     "typescript": "^5.7.2",
     "vite": "^5.4.9",
     "vite-plugin-css-injected-by-js": "^3.5.2",
-    "vite-plugin-mock": "^3.0.2",
-    "vitest": "^2.1.8"
+    "vite-plugin-mock": "^3.0.2"
   },
   "prettier": {
     "printWidth": 120
