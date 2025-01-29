@@ -442,6 +442,11 @@
   resolved "https://npm.pkg.github.com/download/@navikt/ds-tokens/7.9.0/561412e689e6cb10c12fde8de5d4dfe34e212670"
   integrity sha512-YLkMtzTJo0cqEuEsPAGEZ/5JmOMcQr6hgBya3VvM46CU7yi7/sqZTcb3h0q3tBRCf5a3KvtXGfcqcvDChtcHAQ==
 
+"@navikt/nav-dekoratoren-moduler@^3.1.3":
+  version "3.1.3"
+  resolved "https://npm.pkg.github.com/download/@navikt/nav-dekoratoren-moduler/3.1.3/5b4ff3c3727331eab2d8243ff96da8f8508dede0"
+  integrity sha512-gqXk5ovPBmu54voTJfJ2xlPvFMJGE+xm7aS5yGAtQHpDFD61M65C1iMyfW2SmxPPjItdl/Krht0fOXokDCmn/w==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -575,7 +580,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.0.0 || ^19.0.0", "@types/react@^18.3.12", "@types/react@>=17.0.30":
+"@types/react@*", "@types/react@^18.0.0 || ^19.0.0", "@types/react@^18.3.12", "@types/react@>=17.0.30", "@types/react@0.14 || 15 || 16 || 17 || 18 || 19":
   version "18.3.12"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.3.12.tgz"
   integrity sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==
@@ -1070,6 +1075,11 @@ cross-spawn@^7.0.3, cross-spawn@^7.0.6:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+csp-header@>=5.x:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/csp-header/-/csp-header-6.0.0.tgz"
+  integrity sha512-36QEB4YiqByFRvpbBJ1sUqdkWZ21vG3pJavt318X9a1jJOBxS2hgtKOM8K5fBZEf8V6yZPbOspvfXdFshM5TuQ==
+
 cssstyle@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/cssstyle/-/cssstyle-4.1.0.tgz"
@@ -1191,6 +1201,36 @@ dom-accessibility-api@^0.5.9:
   resolved "https://registry.npmjs.org/dom-accessibility-api/-/dom-accessibility-api-0.5.16.tgz"
   integrity sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==
 
+dom-serializer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/dom-serializer/-/dom-serializer-2.0.0.tgz"
+  integrity sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.2"
+    entities "^4.2.0"
+
+domelementtype@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz"
+  integrity sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==
+
+domhandler@^5.0.2, domhandler@^5.0.3, domhandler@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.npmjs.org/domhandler/-/domhandler-5.0.3.tgz"
+  integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
+  dependencies:
+    domelementtype "^2.3.0"
+
+domutils@^3.2.1:
+  version "3.2.2"
+  resolved "https://registry.npmjs.org/domutils/-/domutils-3.2.2.tgz"
+  integrity sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==
+  dependencies:
+    dom-serializer "^2.0.0"
+    domelementtype "^2.3.0"
+    domhandler "^5.0.3"
+
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz"
@@ -1225,10 +1265,15 @@ encodeurl@~1.0.2:
   resolved "https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.2.tgz"
   integrity sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==
 
-entities@^4.4.0:
+entities@^4.2.0, entities@^4.4.0:
   version "4.4.0"
   resolved "https://registry.npmjs.org/entities/-/entities-4.4.0.tgz"
   integrity sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==
+
+entities@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/entities/-/entities-6.0.0.tgz"
+  integrity sha512-aKstq2TDOndCn4diEyp9Uq/Flu2i1GlLkc6XIDQSDMuaFE3OPW5OphLCyQ5SpSJZTb4reN+kTcYru5yIfXoRPw==
 
 environment@^1.0.0:
   version "1.1.0"
@@ -1848,12 +1893,40 @@ hasown@^2.0.0, hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+html-dom-parser@5.0.13:
+  version "5.0.13"
+  resolved "https://registry.npmjs.org/html-dom-parser/-/html-dom-parser-5.0.13.tgz"
+  integrity sha512-B7JonBuAfG32I7fDouUQEogBrz3jK9gAuN1r1AaXpED6dIhtg/JwiSRhjGL7aOJwRz3HU4efowCjQBaoXiREqg==
+  dependencies:
+    domhandler "5.0.3"
+    htmlparser2 "10.0.0"
+
 html-encoding-sniffer@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/html-encoding-sniffer/-/html-encoding-sniffer-4.0.0.tgz"
   integrity sha512-Y22oTqIU4uuPgEemfz7NDJz6OeKf12Lsu+QC+s3BVpda64lTiMYCyGwg5ki4vFxkMwQdeZDl2adZoqUgdFuTgQ==
   dependencies:
     whatwg-encoding "^3.1.1"
+
+html-react-parser@>=5.x:
+  version "5.2.2"
+  resolved "https://registry.npmjs.org/html-react-parser/-/html-react-parser-5.2.2.tgz"
+  integrity sha512-yA5012CJGSFWYZsgYzfr6HXJgDap38/AEP4ra8Cw+WHIi2ZRDXRX/QVYdumRf1P8zKyScKd6YOrWYvVEiPfGKg==
+  dependencies:
+    domhandler "5.0.3"
+    html-dom-parser "5.0.13"
+    react-property "2.0.2"
+    style-to-js "1.1.16"
+
+htmlparser2@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-10.0.0.tgz"
+  integrity sha512-TwAZM+zE5Tq3lrEHvOlvwgj1XLWQCtaaibSN11Q+gGBAS7Y1uZSWwXXRe4iF6OXnaq1riyQAPFOBtYc77Mxq0g==
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.3"
+    domutils "^3.2.1"
+    entities "^6.0.0"
 
 http-proxy-agent@^7.0.2:
   version "7.0.2"
@@ -1910,6 +1983,11 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
   integrity sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==
+
+inline-style-parser@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.npmjs.org/inline-style-parser/-/inline-style-parser-0.2.4.tgz"
+  integrity sha512-0aO8FkhNZlj/ZIbNi7Lxxr12obT7cL1moPfE4tg1LkX7LlLfC6DeX4l2ZEud1ukP9jNQyNnfzQVqwbwmAATY4Q==
 
 internal-slot@^1.1.0:
   version "1.1.0"
@@ -2164,7 +2242,7 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
-jsdom@^25.0.1:
+jsdom@^25.0.1, jsdom@>=16.x:
   version "25.0.1"
   resolved "https://registry.npmjs.org/jsdom/-/jsdom-25.0.1.tgz"
   integrity sha512-8i7LzZj7BF8uplX+ZyOlIz86V6TAsSs+np6m1kpW9u0JWi4z/1t+FzcK1aek+ybTnAC4KhBL4uXCNT0wcUIeCw==
@@ -2736,12 +2814,17 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-property@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/react-property/-/react-property-2.0.2.tgz"
+  integrity sha512-+PbtI3VuDV0l6CleQMsx2gtK0JZbZKbpdu5ynr+lbsuvtmgbNcS3VM0tuY2QjFNOcWxvXeHjDpy42RO+4U2rug==
+
 react-refresh@^0.14.2:
   version "0.14.2"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.2.tgz"
   integrity sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0 || ^19.0.0", react@^18.3.1, react@>=16.8.0, "react@>=17.0.0 || >19.0.0-rc":
+"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0 || ^19.0.0", react@^18.3.1, react@>=16.8.0, "react@>=17.0.0 || >19.0.0-rc", react@>=17.x, "react@0.14 || 15 || 16 || 17 || 18 || 19":
   version "18.3.1"
   resolved "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
@@ -3176,6 +3259,20 @@ strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
+
+style-to-js@1.1.16:
+  version "1.1.16"
+  resolved "https://registry.npmjs.org/style-to-js/-/style-to-js-1.1.16.tgz"
+  integrity sha512-/Q6ld50hKYPH3d/r6nr117TZkHR0w0kGGIVfpG9N6D8NymRPM9RqCUv4pRpJ62E5DqOYx2AFpbZMyCPnjQCnOw==
+  dependencies:
+    style-to-object "1.0.8"
+
+style-to-object@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/style-to-object/-/style-to-object-1.0.8.tgz"
+  integrity sha512-xT47I/Eo0rwJmaXC4oilDGDWLohVhR6o/xAQcPQN8q6QBuZVL8qMYL85kLmST5cPjAorwvqIA4qXTRQoYHaL6g==
+  dependencies:
+    inline-style-parser "0.2.4"
 
 supports-color@^7.1.0:
   version "7.2.0"
