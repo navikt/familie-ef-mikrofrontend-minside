@@ -1,6 +1,6 @@
 name: "Build and deploy to dev"
 
-on: [ workflow_dispatch ]
+on: [workflow_dispatch]
 
 permissions:
   contents: read
@@ -17,8 +17,8 @@ jobs:
     outputs:
       upload_url: ${{ steps.export-cdn-url.outputs.url }}
     steps:
-      - uses: "actions/checkout@v4"
-      - uses: "actions/setup-node@v4"
+      - uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # ratchet:actions/checkout@v4
+      - uses: "actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020" # ratchet:actions/setup-node@v4
         with:
           node-version: 18
           registry-url: "https://npm.pkg.github.com"
@@ -30,7 +30,7 @@ jobs:
       - name: "Build application"
         run: "npm run build"
       - name: cdn-upload
-        uses: nais/deploy/actions/cdn-upload/v2@master
+        uses: nais/deploy/actions/cdn-upload/v2@655191e618af58744d594ab4226aeac78dc739ec # ratchet:nais/deploy/actions/cdn-upload/v2@master
         with:
           team: teamfamilie
           source: ./dist/
@@ -42,7 +42,7 @@ jobs:
           cdn_js_path=$(echo $paths | cut -d',' -f1)
           echo "url=https://cdn.nav.no/$cdn_js_path" >> $GITHUB_OUTPUT
   manifest-update-dev:
-    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v2.yaml@main
+    uses: navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v2.yaml@53cabff5231c0209c9a7a2b472f2fe90abc4ee23 # ratchet:navikt/tms-deploy/.github/workflows/oppdater-mikrofrontend-manifest-v2.yaml@main
     needs: build
     with:
       cluster: dev-gcp
