@@ -1,8 +1,13 @@
 import React from "react";
-import { App } from "./App";
+import App from "./App";
 import { LanguageProvider } from "./language/LanguageProvider";
 
-export const Mikrofrontend = () =>
+const Mikrofrontend = () => {
+  return (
     <LanguageProvider>
       <App />
     </LanguageProvider>
+  );
+};
+
+export default Mikrofrontend;
