@@ -18,7 +18,7 @@ const text: Text = {
   },
 };
 
-export default function useTranslate(id: string) {
+export const useTranslate = (id: string) => {
   const language = useContext(LanguageContext);
   return text[id][language];
 }
