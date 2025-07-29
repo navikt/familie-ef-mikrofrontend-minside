@@ -16,7 +16,6 @@ Mikrofrontend for tilgang til min side for personer med løpende `overangsstøna
 3. Kjør opp med `npm run preview`
 
 # Henvendelser
-
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på github.
 
 ## For NAV-ansatte
