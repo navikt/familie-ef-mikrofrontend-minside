@@ -11,7 +11,7 @@ interface Props {
   undertittel: string;
 }
 
-export const Komponent = ({ tittel, undertittel }: Props) => {
+const Komponent = ({ tittel, undertittel }: Props) => {
   return (
     <a className={styles.container} href={innsynEnsligForsørgerUrl} onClick={logNavigereEvent}>
       <div className={styles.ikonOgTekstContainer}>
@@ -29,3 +29,5 @@ export const Komponent = ({ tittel, undertittel }: Props) => {
     </a>
   );
 };
+
+export default Komponent;
