@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "./Komponent.module.css";
-import { innsynEnsligForsørgerUrl } from "../api/urls";
-import { logNavigereEvent } from "../utils/amplitude";
-import { EnsligForsørgerIcon } from "../icons/EnsligForsørgerIcon";
-import { BodyLong, Heading } from "@navikt/ds-react";
 import { ChevronRightIcon } from "@navikt/aksel-icons";
+import { BodyLong, Heading } from "@navikt/ds-react";
+import { innsynEnsligForsørgerUrl } from "../api/urls";
+import { EnsligForsørgerIcon } from "../icons/EnsligForsørgerIcon";
+import { logNavigereEvent } from "../utils/amplitude";
+import styles from "./Komponent.module.css";
 
 interface Props {
   tittel: string;
