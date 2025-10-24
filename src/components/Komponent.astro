@@ -1,13 +1,14 @@
 ---
-import { ChevronRightIcon } from "@navikt/aksel-icons";
 import { BodyLong, Heading } from "@navikt/ds-react";
 import EnsligForsørgerIcon from "../icons/EnsligForsørgerIcon.astro";
+import ChevronRightIcon from "./ChevronRightIcon.astro";
+import styles from "@src/styles/index.module.css";
 const { tittel, undertittel } = Astro.props
 ---
 
 
-<a>
-  <div class="ikonOgTekstContainer">
+<a class={styles.container}>
+  <div class={styles.tekstOgIkonContainer}>
     <div aria-hidden="true">
       <EnsligForsørgerIcon />
     </div>
@@ -21,4 +22,4 @@ const { tittel, undertittel } = Astro.props
     </div>
   </div>
   <ChevronRightIcon aria-hidden="true" fontSize="24px" />
-  </a>
+</a>
