@@ -1,4 +1,5 @@
 ---
+import { URL_EF_MINSIDE } from "astro:env/server";
 import { BodyLong, Heading } from "@navikt/ds-react";
 import EnsligForsørgerIcon from "../icons/EnsligForsørgerIcon.astro";
 import ChevronRightIcon from "./ChevronRightIcon.astro";
@@ -7,7 +8,7 @@ const { tittel, undertittel } = Astro.props
 ---
 
 
-<a class={styles.container}>
+<a class={styles.container} href={URL_EF_MINSIDE}>
   <div class={styles.tekstOgIkonContainer}>
     <div aria-hidden="true">
       <EnsligForsørgerIcon />
@@ -21,5 +22,5 @@ const { tittel, undertittel } = Astro.props
       </BodyLong>
     </div>
   </div>
-  <ChevronRightIcon aria-hidden="true" fontSize="24px" />
+  <ChevronRightIcon className={styles.chevron} aria-hidden="true" fontSize="24px" />
 </a>
