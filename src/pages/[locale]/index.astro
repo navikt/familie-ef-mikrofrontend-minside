@@ -1,7 +1,6 @@
 ---
 import { text } from "@src/language/text";
 import type { Language } from "@src/language/types";
-import styles from "@src/styles/index.module.css";
 import "@src/styles/aksel.css";
 import { isLocal } from "../../utils/environment";
 import Komponent from "../../components/Komponent.astro";
@@ -11,13 +10,5 @@ const language = Astro.currentLocale as Language;
 
 {isLocal && <meta charset="UTF-8" />}
 <section class="familie-ef-mikrofrontend-minside">
-  <div class={styles.microfrontend}>
     <Komponent tittel={text.title[language]} undertittel={text.subtitle[language]}/>
-  </div>
 </section>
-<script>
-  import { logEvent } from "@src/utils/analytics";
-
-  const microfrontend = document.querySelector("#link");
-  microfrontend?.addEventListener("click", () => logEvent("Lenke"));
-</script>

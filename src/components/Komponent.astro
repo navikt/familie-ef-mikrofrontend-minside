@@ -9,18 +9,16 @@ const { tittel, undertittel } = Astro.props
 
 
 <a class={styles.container} href={URL_EF_MINSIDE}>
-  <div class={styles.tekstOgIkonContainer}>
-    <div aria-hidden="true">
-      <EnsligForsørgerIcon />
-    </div>
-    <div>
-      <Heading size="small">
+  <span class={styles.tekstOgIkonContainer}>
+      <EnsligForsørgerIcon aria-hidden="true"/>
+    <span>
+      <Heading size="small" level="2">
         {tittel}
       </Heading>
       <BodyLong size="medium">
         {undertittel}
       </BodyLong>
-    </div>
-  </div>
+    </span>
+  </span>
   <ChevronRightIcon className={styles.chevron} aria-hidden="true" fontSize="24px" />
 </a>
