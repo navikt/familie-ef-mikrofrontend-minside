@@ -2,7 +2,6 @@
 import { BodyLong, Heading } from "@navikt/ds-react";
 import EnsligForsørgerIcon from "../icons/EnsligForsørgerIcon.astro";
 import styles from "../styles/Komponent.module.css";
-import ChevronRightIcon from "./ChevronRightIcon.astro";
 import LinkCard from "./link-card/LinkCard.astro";
 
 const { tittel, undertittel } = Astro.props;
@@ -13,16 +12,15 @@ const { tittel, undertittel } = Astro.props;
   <div class={styles.container}>
     <div class={styles.ikonOgTekstContainer}>
     <EnsligForsørgerIcon aria-hidden="true"/>
-    <div>
+      <div>
       <Heading size="small" level="2">
         {tittel}
       </Heading>
       <BodyLong size="medium">
         {undertittel}
       </BodyLong>
+      </div>
     </div>
-  </div>
-  <ChevronRightIcon className={styles.chevron} aria-hidden="true" fontSize="24px" />
   </div>
 </LinkCard>
 <script>
