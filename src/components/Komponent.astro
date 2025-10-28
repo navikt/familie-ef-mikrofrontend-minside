@@ -4,11 +4,12 @@ import { BodyLong, Heading } from "@navikt/ds-react";
 import EnsligForsørgerIcon from "../icons/EnsligForsørgerIcon.astro";
 import ChevronRightIcon from "./ChevronRightIcon.astro";
 import styles from "./Komponent.module.css";
-const { tittel, undertittel } = Astro.props
+
+const { tittel, undertittel } = Astro.props;
 ---
 
 
-<a class={styles.container} href={URL_EF_MINSIDE}>
+<a class={styles.container} href={URL_EF_MINSIDE} id="komponent">
   <span class={styles.ikonOgTekstContainer}>
     <EnsligForsørgerIcon aria-hidden="true"/>
     <span>
@@ -22,3 +23,9 @@ const { tittel, undertittel } = Astro.props
   </span>
   <ChevronRightIcon className={styles.chevron} aria-hidden="true" fontSize="24px" />
 </a>
+<script>
+  import { logNavigereEvent } from "@src/utils/amplitude";
+
+  const microfrontend = document.querySelector("#komponent");
+  microfrontend?.addEventListener("click", () => logNavigereEvent());
+</script>
