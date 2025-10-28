@@ -1,21 +1,10 @@
-# tms-microfrontend-template-ssr
+# familie-ef-mikrofrontend-minside
 
-Kan brukes som utgangspunkt for å opprette nye server-side rendrede microfrontends til Min Side.
+Mikrofrontend for tilgang til min side for personer med løpende `overangsstønad`, stønad til `barnetilsyn` eller stønad til `skolepenger`.
 
-# Kom i gang
+# Kom i gang med utvikling
 
-## Tilpasse templatet til ditt prosjekt
-
-1. `CMD + Shift + F` og søk etter `tms-microfrontend-template-ssr` og erstatt dette med ditt applikasjonsnavn.
-2. Bytt ut "min-side" med ditt teams CDN folder (som regel ditt teams navn) i urlen i assetPrefix i astro.config.mjs 
-3. Tilpass innholdet i `nais/dev-gcp/nais.yaml` og `nais/prod-gcp/nais.yaml` til ditt prosjekt.
-4. Tilpass innholdet i `.github/workflows/deploy.yaml` til ditt prosjekt.
-5. Be om tilgang til å oppdatere manifestet og deploye applikasjonen til nais på slack kanalen [#minside-microfrontends](https://nav-it.slack.com/archives/C04V21LT27P).
-6. Kommenter ut `update-manifest-prod-gcp` og `deploy-prod-gcp` stegene i `.github/workflows/deploy.yaml`.
-
-NOTE: Du bør se på konteksten i filen du endrer.
-
-# Kjøre appen lokalt
+## Lokal utvikling
 
 1. Installer dependencies: `npm i`
 2. Start hono mockserver: `npm run mock`
@@ -23,9 +12,12 @@ NOTE: Du bør se på konteksten i filen du endrer.
 4. Appen nås på http://localhost:4321/
 
 # Henvendelser
-
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på github.
 
 ## For NAV-ansatte
 
-Interne henvendelser kan sendes via Slack i kanalen [#minside-microfrontends](https://nav-it.slack.com/archives/C04V21LT27P).
+Interne henvendelser kan sendes via Slack i kanalen #team-familie.
+
+## Kode generert av GitHub Copilot
+
+Dette repoet bruker GitHub Copilot til å generere kode.
