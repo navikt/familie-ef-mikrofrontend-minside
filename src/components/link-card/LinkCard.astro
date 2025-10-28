@@ -1,0 +1,14 @@
+---
+import { URL_EF_MINSIDE } from "astro:env/server";
+import styles from "../../styles/LinkCard.module.css";
+---
+
+<a id={styles.linkcard} class="navds-panel navds-link-panel" href={URL_EF_MINSIDE}>
+  <div class="navds-link-panel__content">
+    <slot />
+  </div>
+  <svg id={styles.linkcardChevron} class="navds-link-panel__chevron" width="24" height="24" viewBox="0 0 24 24"
+       aria-hidden="true">
+    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" />
+  </svg>
+</a>

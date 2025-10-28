@@ -1,31 +1,33 @@
 ---
-import { URL_EF_MINSIDE } from "astro:env/server";
 import { BodyLong, Heading } from "@navikt/ds-react";
 import EnsligForsørgerIcon from "../icons/EnsligForsørgerIcon.astro";
 import styles from "../styles/Komponent.module.css";
 import ChevronRightIcon from "./ChevronRightIcon.astro";
+import LinkCard from "./link-card/LinkCard.astro";
 
 const { tittel, undertittel } = Astro.props;
 ---
 
 
-<a class={styles.container} href={URL_EF_MINSIDE} id="komponent">
-  <span class={styles.ikonOgTekstContainer}>
+<LinkCard id="linkCard">
+  <div class={styles.container}>
+    <div class={styles.ikonOgTekstContainer}>
     <EnsligForsørgerIcon aria-hidden="true"/>
-    <span>
+    <div>
       <Heading size="small" level="2">
         {tittel}
       </Heading>
       <BodyLong size="medium">
         {undertittel}
       </BodyLong>
-    </span>
-  </span>
+    </div>
+  </div>
   <ChevronRightIcon className={styles.chevron} aria-hidden="true" fontSize="24px" />
-</a>
+  </div>
+</LinkCard>
 <script>
   import { logNavigereEvent } from "@src/utils/amplitude";
 
-  const microfrontend = document.querySelector("#komponent");
+  const microfrontend = document.querySelector("#linkCard");
   microfrontend?.addEventListener("click", () => logNavigereEvent());
 </script>
