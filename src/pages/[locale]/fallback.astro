@@ -1,0 +1,17 @@
+---
+// Your microfrontend could fail with an error. This is a static version of your microfrontend that will be displayed
+// to the user instead.
+
+import { text } from "@src/language/text";
+import type { Language } from "@src/language/types";
+import "@src/styles/aksel.css";
+import { isLocal } from "../../utils/environment";
+import Komponent from "../../components/Komponent.astro";
+
+const language = Astro.currentLocale as Language;
+---
+
+{isLocal && <meta charset="UTF-8" />}
+<section class="familie-ef-mikrofrontend-minside">
+    <Komponent tittel={text.title[language]} undertittel={text.subtitle[language]} url={Astro.url}/>
+</section>

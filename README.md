@@ -6,14 +6,10 @@ Mikrofrontend for tilgang til min side for personer med løpende `overangsstøna
 
 ## Lokal utvikling
 
-1. Start appen lokalt ved å kjøre `npm run dev`
-2. Appen nås på http://localhost:3000
-
-## Test prodversjon lokalt
-
-1. Endre til `input: resolve(__dirname, "index.html")` i `vite.config.ts` (husk å endre tilbake etterpå)
-2. Bygg prodversjon med `npm run build`
-3. Kjør opp med `npm run preview`
+1. Installer dependencies: `npm i`
+2. Start hono mockserver: `npm run mock`
+3. Med mockserver kjørende i egen terminal, start appen: `npm run dev`
+4. Appen nås på http://localhost:4321/
 
 # Henvendelser
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på github.

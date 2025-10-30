@@ -1,0 +1,25 @@
+---
+import { BodyLong, Heading } from "@navikt/ds-react";
+import EnsligForsørgerIcon from "../icons/EnsligForsørgerIcon.astro";
+import styles from "../styles/Komponent.module.css";
+import LinkCard from "./link-card/LinkCard.astro";
+
+const { tittel, undertittel } = Astro.props;
+---
+
+<LinkCard id="linkCard">
+  <div class={styles.ikonOgTekstContainer}>
+    <EnsligForsørgerIcon aria-hidden="true"/>
+    <div>
+        <Heading level="3" size="small" className={styles.heading}>{tittel}</Heading>
+        <BodyLong size="medium" className={styles.detail}>{undertittel}</BodyLong>
+    </div>
+  </div>
+</LinkCard>
+
+<script>
+  import { logNavigereEvent } from "@src/utils/amplitude";
+
+  const microfrontend = document.querySelector("#linkCard");
+  microfrontend?.addEventListener("click", () => logNavigereEvent());
+</script>
