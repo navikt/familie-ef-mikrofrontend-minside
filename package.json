@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.5",
-    "@astrojs/node": "^9.5.1",
+    "@astrojs/node": "9.5.1",
     "@astrojs/react": "4.4.2",
     "@navikt/aksel-icons": "7.34.0",
     "@navikt/ds-css": "7.34.0",
@@ -21,8 +21,8 @@
     "@navikt/nav-dekoratoren-moduler": "3.6.0",
     "@navikt/oasis": "4.1.1",
     "@opentelemetry/sdk-node": "0.208.0",
-    "astro": "^5.16.0",
-    "pino": "^10.1.0",
+    "astro": "5.16.0",
+    "pino": "10.1.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "rollup-plugin-import-map": "3.0.0"
@@ -33,7 +33,7 @@
     "@types/node": "24.10.1",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
-    "hono": "^4.10.6",
+    "hono": "4.10.6",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "postcss": "8.5.6",
