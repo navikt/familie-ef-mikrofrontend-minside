@@ -33,6 +33,9 @@ jobs:
         env:
           ASTRO_KEY: ${{ secrets.ASTRO_KEY }}
 
+      - name: "Prune devDependencies"
+        run: "npm prune --production"
+
       - name: "Upload to cdn"
         uses: nais/deploy/actions/cdn-upload/v2@master
         with:
