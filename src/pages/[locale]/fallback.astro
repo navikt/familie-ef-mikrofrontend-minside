@@ -12,6 +12,6 @@ const language = Astro.currentLocale as Language;
 ---
 
 {isLocal && <meta charset="UTF-8" />}
-<section class="familie-ef-mikrofrontend-minside">
+<div class="familie-ef-mikrofrontend-minside">
     <Komponent tittel={text.title[language]} undertittel={text.subtitle[language]} url={Astro.url}/>
-</section>
+</div>
