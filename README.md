@@ -20,4 +20,5 @@ Interne henvendelser kan sendes via Slack i kanalen #team-familie.
 
 ## Kode generert av GitHub Copilot
 
+
 Dette repoet bruker GitHub Copilot til å generere kode.
