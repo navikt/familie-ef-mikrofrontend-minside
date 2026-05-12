@@ -1,6 +1,6 @@
 import { getAnalyticsInstance } from "@navikt/nav-dekoratoren-moduler";
 
-const logger = getAnalyticsInstance("familie-ef-mikrofrontend-minside");
+const logger = getAnalyticsInstance("dekoratoren");
 
-export const logNavigereEvent = (destinasjon: string) =>
-  logger("navigere", { lenketekst: "familie-ef-mikrofrontend-minside", destinasjon });
+export const logNavigereEvent = () =>
+  logger("navigere", { lenketekst: "familie-ef-mikrofrontend-minside", destinasjon: window.location.href });
