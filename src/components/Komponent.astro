@@ -20,6 +20,6 @@ const { tittel, undertittel } = Astro.props;
 <script>
   import { logNavigereEvent } from "@src/utils/amplitude";
 
-  const microfrontend = document.querySelector<HTMLAnchorElement>("#linkCard");
-  microfrontend?.addEventListener("click", () => logNavigereEvent(microfrontend.href));
+  const microfrontend = document.querySelector("#linkCard");
+  microfrontend?.addEventListener("click", () => logNavigereEvent());
 </script>
