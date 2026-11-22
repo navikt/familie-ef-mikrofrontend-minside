@@ -41,7 +41,7 @@ jobs:
           destination: 'familie-ef-mikrofrontend-minside'
 
       - name: "Build and push"
-        uses: nais/docker-build-push@v0
+        uses: nais/docker-build-push@v1
         id: docker-build-push
         with:
           team: teamfamilie
